@@ -1,0 +1,457 @@
+* {
+    image-rendering: pixelated;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.comingsoon {
+    font-size: 50px;
+    text-align: center;
+    color: #e3e3e3;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.whiteBackdrop {
+    height: 100%;
+    width: 500px;
+    max-width: 95vw;
+    min-width: 400px;
+    background-color: rgba(255, 255, 255, 0.705);
+    z-index: -500;  
+    position: absolute; 
+}
+
+.lowerBanner {
+    bottom:0;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.lowerBanner #fill {
+    flex-grow: 1;
+}
+
+.lowerBanner #image {
+    background-image: url(citybackdrop.png);
+    width: 100%;
+    height: 220px;
+    z-index: -1000;
+}
+
+#verticalAlign {
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    min-height: 100vh;
+    position: relative;
+}
+
+#BG {
+    background-color: rgb(255, 255, 255)
+}
+
+#lasttext {
+    margin-top: 2px;
+    color: rgb(54, 54, 54);
+    font-size: 10px;
+    opacity:0.3;
+}
+
+#lasttext::after {
+    content:"//// SAWERON 2024 SITE, CRAFTED WITH AMPLE LOVE ////";
+}
+
+.hLine {
+    padding:10px;
+}
+
+.hLine div {
+    width: 100%;
+    border-bottom: 1px dashed black;
+}
+
+.root {
+    width:650px;
+    max-width: 85vw;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.windowed {
+    margin-top: 40px;
+    margin-bottom: 5px;
+}
+
+.expand {
+    flex-grow: 1;
+}
+
+.extraspace {
+    min-height: 15px;
+}
+
+.centerSocials {
+    display: flex;
+    justify-content: right;
+}
+
+.contentContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+
+.mainContent {
+    flex-grow:1;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    position: relative;
+}
+
+.splitter {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.end {
+    align-self: flex-end;
+}
+
+.start {
+    align-self: flex-start;
+}
+
+.heroImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    flex-grow: 0;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.heroImage div {
+    
+    width: 100%;
+    background-size:cover;
+    
+}
+
+.heroImage.foxPic {
+    flex-basis: 181px;
+}
+
+.heroImage.foxPic div {
+    aspect-ratio: 221/292;
+    background-image: url(foxhpic4.png);
+    max-width: 181px;
+}
+
+
+.maxxie {
+    aspect-ratio: 142/122;
+    width: 100%;
+    max-width: 142px;
+    object-fit: cover;
+    background-image: url(bgtree3.png);
+    background-size: cover;
+    margin-top:20px;
+}
+
+.infoSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.pagetitle {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top:10px;
+    padding-bottom:10px;
+    margin-left: 40px;
+    margin-right: 40px;
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+}
+
+.indented {
+    margin-left:20px;
+    margin-right:20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    flex:1
+}
+
+.extraindented {
+    margin-bottom: 10px;
+}
+
+.infoSection p {
+    z-index: 20;
+    margin:0px;
+    text-indent: 10px;
+    word-break: break-word;
+}
+
+.tabsList {
+    margin-top: 30px;
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    height:30px;
+}
+
+.tabsList a {
+    flex:1;
+    border-right: 1px solid black;
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+
+.tabsList a:hover {
+    background-color: rgba(155, 155, 155, 0.3);
+}
+
+.tabsList a:hover span {
+    text-decoration: underline;
+}
+
+.tabsList a span {
+    text-align: center;
+    width: 100%;
+    z-index: 20;
+}
+
+
+
+/* SOCIALS LIST */
+.socialsList {
+    list-style: none;
+    padding: 0px;
+    margin:0px;
+
+    z-index: 5;
+    position: relative;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+    margin-left:20px;
+}
+
+.socialsList li { 
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.socialsHover li a:hover {
+    border-image: url(SHADOW.png);
+    background-color:#bebebe;
+    border-image-slice: 10;
+    border-width: 10px;
+}
+
+.socialsHover li a:hover span {
+    text-decoration: underline;
+}
+
+.greyborder, .socialsList li a {
+    border-image: url(SHADOW2.png);
+    image-rendering: pixelated;
+    border-image-slice: 10;
+    border-width: 10px;
+    border-style:solid;
+    border-image-repeat: repeat;
+    background-clip: padding-box;
+    background-color:#e3e3e3;
+}
+
+.socialsList li img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.socialsList li a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.socialsList li span {
+    max-width: 70px;
+    padding-left: 5px;
+    border-left: 1px dotted black;
+}
+
+
+
+#fi2 {
+    display: none;
+}
+
+
+
+#mainparagraph {
+    min-width: 200px;
+}
+
+@media screen and (max-width:550px) {
+    .root #mainparagraph {
+        min-width: 0;
+    }
+
+    .root #fi2 {
+        display:block;
+    }
+
+    .root #fi1 {
+        display: none;
+    }
+
+    .root .splitter {
+        flex-direction: column;
+    }
+
+    .root .heroImage {
+        flex-direction: row;
+    }
+
+    .root .centerSocials {
+        justify-content: center;
+    }
+
+    .root .socialsList {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+
+    .root .mainContent {
+        flex-wrap: wrap;
+    }
+
+    .root .tabsList {
+        flex-direction: column;
+        height:initial;
+    }
+
+    .root .socialsList span {
+        max-width:initial;
+    }
+
+    .root .tabsList a {
+        border-right: 0px;
+        border-bottom: 1px solid black;
+        height: 40px;
+        flex:initial;
+    }
+
+}
+
+#finalItem {
+    border: none;
+}
+
+a {
+    color:black;
+    text-decoration: none;
+}
+
+#logo {
+    max-width: 250px;
+}
+
+.pixeltext {
+    font-family: fixedsys;
+    font-size: 16px;
+    -webkit-font-smoothing : none;
+    font-smooth: never;
+    color: black;
+}
+
+.pixelBorder {
+    position: absolute;
+    top:-6px;
+    bottom:-6px;
+    left:-2px;
+    right:-2px;
+    z-index:0;
+    border-image: url(pixelBorder4.png);
+    border-image-slice: 10;
+    border-width: 10px;
+    border-style: solid;
+    border-image-repeat: repeat;
+    box-sizing: border-box;
+}
+
+.shadow {
+    position: absolute;
+    top:3px;
+    bottom:-20px;
+    left:3px;
+    right:-8px;
+    z-index:-60;
+    border-image: url(SHADOW.png);
+    border-image-slice: 15;
+    border-width: 15px;
+    border-style: solid;
+    border-image-repeat: repeat;
+    box-sizing: border-box;
+}
+
+.whiteshadow div {
+    background-color: white;
+    width: 100%;
+    height: 100%;
+}
+
+.backgroundTiles {
+    background-image: url(tiles2.png);
+    position: absolute;
+    top:0px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    z-index:0;
+    opacity:1;
+}
+
+#borderImage {
+    position: absolute;
+    top:0px;
+    bottom: -20px;
+    left: -3px;
+    right: -3px;
+
+    border-width: 7px;
+    border-style: solid;
+
+    border-image: url(9slice.png);
+
+    border-image-repeat: round;
+    border-image-slice: 7;
+    z-index: -1;
+}
